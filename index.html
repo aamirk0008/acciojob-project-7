@@ -7,8 +7,102 @@
     <title>Food Order</title>
 </head>
 <body>
+<div class="header">
+        <div></div>
+        <div class="search-container">
+            <div class="search-icon">🔍</div>
+            <input type="text" class="search-input" placeholder="Search Food Item">
+        </div>
+        <div class="auth-buttons">
+            <button class="btn signup-btn">Signup</button>
+            <button class="btn login-btn">Login</button>
+            <div class="profile-icon">👤</div>
+        </div>
+    </div>
 
-    <h1>Food Order Restaurant</h1>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo">👨‍🍳</div>
+                <div class="restaurant-title">Your Restaurant Menu</div>
+                <div class="restaurant-tagline">Your Slogan</div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Quick Links</div>
+                <ul class="sidebar-list">
+                    <li>1. Home</li>
+                    <li>2. Your Orders</li>
+                    <li>3. Wallet</li>
+                    <li>4. Profile</li>
+                    <li>5. Logout</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">More About Us</div>
+                <ul class="sidebar-list">
+                    <li>1. Our blog</li>
+                    <li>2. Upcoming Dishes</li>
+                    <li>3. Our Story</li>
+                    <li>4. Social Media Links</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">🍟 LOGO HERE</div>
+                        <div style="color: #8B4513; font-size: 16px; margin-bottom: 10px;">WEEKEND SPECIAL</div>
+                        <div class="hero-title">Delicious</div>
+                        <div class="hero-subtitle">FOOD MENU</div>
+                        <div class="order-info">
+                            <button class="order-btn" onclick="startOrderProcess()">ORDER NOW</button>
+                            <div class="contact-info">323-517-4946</div>
+                            <div class="website">WWW.YOURWEBSITE.COM</div>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="discount-badge">
+                            <div style="font-size: 12px;">SAVE</div>
+                            <div style="font-size: 20px;">50%</div>
+                            <div style="font-size: 10px;">OFF</div>
+                        </div>
+                        <div class="delivery-info">
+                            <div class="delivery-hours">24/7</div>
+                            <div class="delivery-text">Home Delivery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Section -->
+            <div class="menu-section">
+                <div class="menu-title">Menu</div>
+                <div id="menuContainer" class="menu-grid">
+                    <div class="loading">Loading delicious food items...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Processing Modal -->
+    <div id="orderProcessing" class="order-processing">
+        <div class="order-modal">
+            <h2>Processing Your Order</h2>
+            <div class="spinner"></div>
+            <div id="orderStatus">Taking your order...</div>
+            <div id="orderSummaryModal" class="order-summary" style="display: none;">
+                <h3>Your Order:</h3>
+                <div id="orderItemsList"></div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
